@@ -182,3 +182,13 @@ input{
     font-size: x-large;
     background-color: rgb(204, 196, 255);
 }
+
+/*main*/
+.mainimg{
+    position: relative;
+    top: 200px;
+    display: block;
+    width: 60%;
+    align-items: center;
+    display: block;
+}
