@@ -4,6 +4,7 @@
 }
 body{
     background-color: rgb(220, 226, 245);
+    margin: 0;
 }
 
 /*header*/
@@ -67,11 +68,12 @@ body{
 }
 
 @media screen and (max-width: 1230px) {
+
     .navbar{
+        display: flex;
         flex-direction: column;
         padding-top: 70px;
     }
-
     
     .navbar_brand{
         font-size: 17px;
@@ -158,9 +160,8 @@ input{
     font-size: x-large;
 }
 
-.left{
-    background-color: rgb(107, 123, 189);
-    
+.mem{
+    background-color: rgb(87, 87, 138);
 }
 
 .signup{
@@ -170,7 +171,6 @@ input{
     display: block;
     border-radius: 50px;
     font-size: x-large;
-    background-color: rgb(204, 196, 255);
 }
 
 .login{
@@ -183,12 +183,30 @@ input{
     background-color: rgb(204, 196, 255);
 }
 
-/*main*/
-.mainimg{
-    position: relative;
-    top: 200px;
-    display: block;
+/*left*/
+div.left{
     width: 60%;
+    box-sizing: border-box;
+}
+
+div.right{
+    width: 40%;
+    box-sizing: border-box;
+}
+
+/*main*/
+
+
+.mainimg{
+    display: flex;
+    justify-content: left;
     align-items: center;
-    display: block;
+    margin: 150px;
+    width: 100%;
+}
+
+.mainimg img{
+    max-width: 100%;
+    height: auto;
+    display: flex;
 }
