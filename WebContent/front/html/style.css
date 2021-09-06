@@ -184,11 +184,17 @@ input{
 }
 
 /*main*/
-.main{
-    float: center;
-    height:400px;
-    display: flex;
-    place-items: center;
+
+.main .img{
+    float: initial;
+    display: block;
+    position: absolute;
+    margin-left: 500px;
+    margin-right: 500px;
+    width: 60%;
+    top: 300px;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-middle-left{
@@ -241,9 +247,6 @@ input{
 
 @media screen and (max-width: 1230px) {
     
-    .main{
-        height: 1000px;
-    }
 
     .main-middle-left{
         width: auto;
@@ -255,6 +258,12 @@ input{
 
     .main-middle-right{
         width: auto;
+    }
+
+    .img{
+        position: absolute;
+        top: 800px;
+        height: 500px;
     }
 
 
