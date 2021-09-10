@@ -3,8 +3,35 @@
     padding: 0;
 }
 body{
-    background-color: rgb(220, 226, 245);
+    background-color: rgb(190, 210, 214);
     margin: 0;
+}
+
+@keyframes visualtxt1{
+    0%{opacity: 0; transform: translate(0,170px)}
+    15%{opacity: 1; transform: translate(0,70px)}
+    80%{opacity: 1; transform: translate(0,70px)}
+    90%{opacity: 0; transform: translate(-100,70px)}
+    100%{opacity: 0; transform: translate(0,70px)}
+}
+
+@keyframes visualtxt2{
+    0%{opacity: 0; transform: translate(0,170px)}
+    10%{opacity: 0; transform: translate(0,170px)}
+    30%{opacity: 1; transform: translate(0,70px)}
+    80%{opacity: 1; transform: translate(0,70px)}
+    90%{opacity: 0; transform: translate(-100,70px)}
+    100%{opacity: 0; transform: translate(0,70px)}
+}
+
+@keyframes visualtxt3{
+    0%{opacity: 0; transform: translate(0,220px)}
+    10%{opacity: 0; transform: translate(0,220px)}
+    20%{opacity: 0; transform: translate(0,220px)}
+    30%{opacity: 1; transform: translate(0,120px)}
+    80%{opacity: 1; transform: translate(0,120px)}
+    90%{opacity: 0; transform: translate(-100,120px)}
+    100%{opacity: 0; transform: translate(0,120px)}
 }
 
 /*header*/
@@ -12,7 +39,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 30px;
+    padding: 90px;
+    background-color: rgb(218, 239, 243);
 }
 
 .navbar_brand{
@@ -32,7 +60,7 @@ body{
 .navbar_logo i{
     font-size: 65px;
     position: absolute;
-    margin: 0 -125px;
+    margin: -28px -125px;
     color: rgb(45, 55, 94);
 }
 
@@ -44,7 +72,7 @@ body{
     justify-content: center; /*가운데*/
     top: 160px;
     width: 100%;
-    background-color: rgb(107, 123, 189);
+    background-color: rgb(133, 173, 181);
 }
 
 .navbar_menu li a{
@@ -55,7 +83,7 @@ body{
 }
 
 .navbar_menu li:hover{
-    background-color: rgb(179, 188, 223);
+    background-color: rgb(189, 206, 209);
 }
 
 .navbar_togglebtn{
@@ -64,7 +92,7 @@ body{
     top: 130px;
     right: 20px;
     font-size: 20px;
-    color: rgb(54, 58, 79);
+    color: rgb(209, 125, 125);
 }
 
 @media screen and (max-width: 1230px) {
@@ -111,9 +139,21 @@ body{
         display: block;
     }
 
+    .visual_inner{
+        width: 100%;
+        height: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
     .navbar_menu.active{
         display: flex;
     }
+
+    .visual_inner.active{
+        display: none;
+    }
+    
 }
 
 a{
@@ -161,7 +201,7 @@ input{
 }
 
 .mem{
-    background-color: rgb(87, 87, 138);
+    background-color: rgb(70, 139, 153);
 }
 
 .signup{
@@ -171,42 +211,86 @@ input{
     display: block;
     border-radius: 50px;
     font-size: x-large;
+    background-color:rgb(101, 167, 181);
 }
 
 .login{
     width: 150px;
     height: 50px;
+    display: flex;
     margin: 50px auto 0 auto;
     display: block;
     border-radius: 50px;
     font-size: x-large;
-    background-color: rgb(204, 196, 255);
+    background-color: rgb(101, 167, 181);
+}
+
+/*main_visual*/
+article{
+    width: 100%;
+    height: 800px;
+    margin-top: 48px;
+    background: url('../image/main_visual.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.visual_inner{
+    width: 100%;
+    height: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.visual_inner h3{
+    font-size: 35.5px;
+    padding-bottom: 20px;
+    animation: visualtxt1 10s infinite;
+}
+
+.visual_inner h2{
+    font-size: 30.5px;
+    padding-bottom: 10px;
+    animation: visualtxt2 10s infinite;
+}
+
+.visual_inner p{
+    font-size: 80px;
+    animation: visualtxt3 10s infinite;
 }
 
 /*left*/
-div.left{
-    width: 60%;
+.left{
+    width: 70%;
     box-sizing: border-box;
+    float: left;
 }
 
-div.right{
-    width: 40%;
+/*right*/
+.right{
+    width: 30%;
     box-sizing: border-box;
+    float: right;
+}
+
+.right_ex p{
+    font-size: 30px;
+    border-radius: 12px;
+    
 }
 
 /*main*/
-
-
 .mainimg{
     display: flex;
     justify-content: left;
     align-items: center;
-    margin: 150px;
+    margin: 50px;
     width: 100%;
 }
 
 .mainimg img{
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     display: flex;
 }
